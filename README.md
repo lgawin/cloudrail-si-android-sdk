@@ -56,5 +56,9 @@ new Thread() {
 
 ## Get Updates
 
-To keep updated with CloudRail, including any new providers that are added, just add your email address to http://cloudrail.com/updates/.
+To keep updated with CloudRail, including any new providers that are added, just add your email address to https://cloudrail.com/updates/.
+
+## Pricing
+
+CloudRail is free to use. For all projects; commercial and non-commercial. We want APIs to be accessible to all developers. We want APIs to be easier to manage. This is only possible if there are free, powerful tools out there to do this.
 
