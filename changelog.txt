@@ -1,0 +1,13 @@
+2.0 - Improvements and a change to the API ----------------------------
+
+The upload function in the CloudStorage interface now takes a fourth boolean parameter that determines whether an already present file at the specified path will throw an exception (like before) or overwrite its contents. With this parameter set to false, the function will behave like in the previous version.
+
+The CloudStorage interface now has two new functions, login and logout, which allow more control over the user's authentication state
+
+All CloudStorage implementations now support copying of folders with the copy function
+
+Exceptions now have unified types for more convenient handling
+
+1.0 - Initial Release -------------------------------------------------
+
+Initial release
