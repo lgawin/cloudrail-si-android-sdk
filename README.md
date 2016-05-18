@@ -36,11 +36,13 @@ new Thread() {
 ````
 
 ## Current Services
-
+Cloud Storage:
 * Dropbox
 * Box
 * Google Drive
-* OneDrive
+* Microsoft OneDrive
+
+More interfaces like social, payment or messaging are coming soon.
 
 ## Advantages of Using CloudRail
 
@@ -62,3 +64,6 @@ To keep updated with CloudRail, including any new providers that are added, just
 
 CloudRail is free to use. For all projects; commercial and non-commercial. We want APIs to be accessible to all developers. We want APIs to be easier to manage. This is only possible if there are free, powerful tools out there to do this.
 
+## Questions?
+
+support@cloudrail.com
