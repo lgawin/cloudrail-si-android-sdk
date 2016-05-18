@@ -56,6 +56,20 @@ More interfaces like social, payment or messaging are coming soon.
 
 * No Maintenance Times: The CloudRail Libraries are updated when a provider changes their API.
 
+## Maven
+build.gradle
+```
+repositories {
+    maven {
+        url "http://maven.cloudrail.com"
+    }
+}
+
+dependencies {
+    compile 'com.cloudrail:cloudrail-si-android:2.0.1'
+}
+```
+
 ## Get Updates
 
 To keep updated with CloudRail, including any new providers that are added, just add your email address to https://cloudrail.com/updates/.
