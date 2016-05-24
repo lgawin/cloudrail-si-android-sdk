@@ -25,7 +25,7 @@ new Thread() {
             AssetManager assetManager = getAssets();
             stream = assetManager.open("UserData.csv");
             long size = assetManager.openFd("UserData.csv").getLength();
-            cs.upload("/TestFolder/Data.csv", stream, size); // <---
+            cs.upload("/TestFolder/Data.csv", stream, size, false); // <---
         } catch (Exception e) {
             // TODO: handle error
         } finally {
