@@ -10,7 +10,60 @@ Full documentation can be found at https://docs.cloudrail.com/
 
 With CloudRail, you can easily integrate external APIs into your application. CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers. This means that, for example, upload() works in exactly the same way for Dropbox as it does for Google Drive, OneDrive, and other Cloud Storage Services, and getEmail() works similarly the same way across all social networks.
 
-## Code Sample
+## Current Services
+
+### Social Media Profiles:
+
+* Facebook
+* Github
+* Google Plus
+* LinkedIn
+* Slack
+* Twitter
+* Windows Live
+* Yahoo
+
+#### Features
+
+* Get profile information, including full names, emails, genders, date of birth, and locales.
+* Retrieve profile pictures.
+* Login using the Social Network.
+
+#### Code Example:
+
+```` java
+// final Profile profile = new GooglePlus(this, "[clientIdentifier]", "[clientSecret]");
+// final Profile profile = new GitHub(this, "[clientIdentifier]", "[clientSecret]");
+// final Profile profile = new Slack(this, "[clientIdentifier]", "[clientSecret]");
+// ...
+final Profile profile = new Facebook(this, "[clientIdentifier]", "[clientSecret]");
+new Thread() {
+    @Override
+    public void run() {
+        String fullName = profile.getFullName();
+        String email = profile.getEmail();
+        // ...
+    }
+}.start();
+````
+
+### Cloud Storage:
+
+* Dropbox
+* Box
+* Google Drive
+* Microsoft OneDrive
+
+#### Features:
+
+* Download files from Cloud Storage.
+* Upload files to Cloud Storage.
+* Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
+* Retrieve user information.
+* 
+
+#### Code Example:
+
 ```` java
 // CloudStorage cs = new Box(context, "[clientIdentifier]", "[clientSecret]");
 // CloudStorage cs = new OneDrive(context, "[clientIdentifier]", "[clientSecret]");
@@ -34,39 +87,6 @@ new Thread() {
     }
 }.start();
 ````
-
-## Current Services
-
-### Social Media Profiles:
-
-* Facebook
-* Github
-* Google Plus
-* LinkedIn
-* Slack
-* Twitter
-* Windows Live
-* Yahoo
-
-#### Features
-
-* Get profile information, including full names, emails, genders, date of birth, and locales.
-* Retrieve profile pictures.
-* Login using the Social Network.
-
-### Cloud Storage:
-
-* Dropbox
-* Box
-* Google Drive
-* Microsoft OneDrive
-
-#### Features:
-
-* Download files from Cloud Storage.
-* Upload files to Cloud Storage.
-* Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
-* Retrieve user information.
 
 More interfaces like payment and messaging are coming soon.
 
