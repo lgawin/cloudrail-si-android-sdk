@@ -52,9 +52,9 @@ new Thread() {
 
 * Get profile information, including full names, emails, genders, date of birth, and locales.
 * Retrieve profile pictures.
-* Logins using the Social Network.
+* Login using the Social Network.
 
-###C loud Storage:
+### Cloud Storage:
 
 * Dropbox
 * Box
@@ -63,10 +63,10 @@ new Thread() {
 
 #### Features:
 
-* Download files from Cloud Storage
-* Upload files to Cloud Storage
-* Get Meta Data of files and interact with them.
-* Retrieve User Information
+* Download files from Cloud Storage.
+* Upload files to Cloud Storage.
+* Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
+* Retrieve user information.
 
 More interfaces like payment and messaging are coming soon.
 
