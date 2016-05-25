@@ -1,3 +1,7 @@
+- 2.1.0 - New interface
+
+Added the Profile interface with eight service implementations
+
 - 2.0.1 - Bugfixes
 
 Small bugfixes concerning wrong exception types
