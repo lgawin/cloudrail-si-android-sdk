@@ -60,7 +60,6 @@ new Thread() {
 * Upload files to Cloud Storage.
 * Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
 * Retrieve user information.
-* 
 
 #### Code Example:
 
