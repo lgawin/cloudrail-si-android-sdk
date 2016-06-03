@@ -111,7 +111,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.1.0'
+    compile 'com.cloudrail:cloudrail-si-android:2.1.2'
 }
 ```
 

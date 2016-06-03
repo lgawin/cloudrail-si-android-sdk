@@ -1,3 +1,9 @@
+- 2.1.2 - Bugfixes
+
+When the authentication WebView is ended before authentication is completed (e.g. a user cancels authentication) an AuthenticationException is thrown to allow better handling of this case.
+
+A bug that caused repeated login and logouts to fail was fixed.
+
 - 2.1.0 - New interface
 
 Added the Profile interface with eight service implementations
