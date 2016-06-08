@@ -12,6 +12,73 @@ With CloudRail, you can easily integrate external APIs into your application. Cl
 
 ## Current Services
 
+### Payment 
+
+* PayPal
+* Stripe
+
+#### Features
+
+* Perform charges
+* Refund previously made charges
+* Manage subscriptions
+
+#### Code Example
+
+```` java
+final Payment payment = new PayPal(this, true, "[clientIdentifier]", "[clientSecret]");
+new Thread() {
+    @Override
+    public void run() {
+        CreditCard source = new CreditCard(null, 6L, 2021L, "xxxxxxxxxxxxxxxx", "visa", "<FirstName>", "<LastName>", null);
+        Charge charge = payment.createCharge(500L, "USD", source);
+        Log.i("info", "Charge: " + charge.toString());    
+    }
+}.start();
+````
+
+### SMS
+
+* Twilio
+* Nexmo
+
+#### Features
+
+* Send SMS
+
+#### Code Example
+
+````java
+final SMS sms = new Twilio(this, "[clientIdentifier]", "[clientSecret]");
+new Thread() {
+@Override
+    public void run() {
+        sms.sendSMS("CloudRail", "+4912345678", "Hello from CloudRail");
+    }
+}.start();
+````
+
+### Email 
+
+* Mailjet
+* Sendgrid
+
+#### Features
+
+* Send Email
+
+#### Code Example
+
+````java
+final Email email = new Sendgrid(this, "[username]", "[password]");
+new Thread() {
+    @Override
+    public void run() {
+        email.sendEmail("info@cloudrail.com", "CloudRail", Arrays.asList("foo@bar.com", "bar@foo.com"), "Welcome", "Hello from CloudRail", null, null, null);
+    }
+}.start();
+````
+
 ### Social Media Profiles:
 
 * Facebook
@@ -111,7 +178,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.1.2'
+    compile 'com.cloudrail:cloudrail-si-android:2.2.0'
 }
 ```
 
