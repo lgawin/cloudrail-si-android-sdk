@@ -1,3 +1,9 @@
+- 2.2.0 - New interfaces
+
+Added three new interfaces: Payment, SMS and Email. For Payment we added PayPal as well as Stripe. Nexmo and Twilio implement the SMS interface. For Email we added Mailjet and Sendgrid.
+
+The SDK now throws an exception if calls to the SDKs are made from the UI-Thread.
+
 - 2.1.2 - Bugfixes
 
 When the authentication WebView is ended before authentication is completed (e.g. a user cancels authentication) an AuthenticationException is thrown to allow better handling of this case.
