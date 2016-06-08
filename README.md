@@ -1,7 +1,7 @@
 # CloudRail - Integrate Multiple Services With Just One API
 
 <p align="center">
-  <img src="http://cloudrail.com/wp-content/uploads/2016/05/cloudrail_SI_github.png"/>
+  <img width="500px" src="http://cloudrail.github.io/img/cloudrail_si_github.png"/>
 </p>
 
 CloudRail is a free software library which abstracts multiple APIs from different providers into a single and universal interface.
@@ -10,7 +10,85 @@ Full documentation can be found at https://docs.cloudrail.com/
 
 With CloudRail, you can easily integrate external APIs into your application. CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers. This means that, for example, upload() works in exactly the same way for Dropbox as it does for Google Drive, OneDrive, and other Cloud Storage Services, and getEmail() works similarly the same way across all social networks.
 
-## Current Services
+## Current Interfaces
+<p align="center">
+  <img width="600px" src="http://cloudrail.github.io/img/available_interfaces.png"/>
+</p>
+
+### Cloud Storage:
+
+* Dropbox
+* Box
+* Google Drive
+* Microsoft OneDrive
+
+#### Features:
+
+* Download files from Cloud Storage.
+* Upload files to Cloud Storage.
+* Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
+* Retrieve user information.
+
+#### Code Example:
+
+```` java
+// CloudStorage cs = new Box(context, "[clientIdentifier]", "[clientSecret]");
+// CloudStorage cs = new OneDrive(context, "[clientIdentifier]", "[clientSecret]");
+// CloudStorage cs = new GoogleDrive(context, "[clientIdentifier]", "[clientSecret]");
+CloudStorage cs = new Dropbox(context, "[clientIdentifier]", "[clientSecret]");
+new Thread() {
+    @Override
+    public void run() {
+        cs.createFolder("/TestFolder"); // <---
+        InputStream stream = null;
+        try {
+            AssetManager assetManager = getAssets();
+            stream = assetManager.open("UserData.csv");
+            long size = assetManager.openFd("UserData.csv").getLength();
+            cs.upload("/TestFolder/Data.csv", stream, size, false); // <---
+        } catch (Exception e) {
+            // TODO: handle error
+        } finally {
+            // TODO: close stream
+        }
+    }
+}.start();
+````
+
+### Social Media Profiles:
+
+* Facebook
+* Github
+* Google Plus
+* LinkedIn
+* Slack
+* Twitter
+* Windows Live
+* Yahoo
+
+#### Features
+
+* Get profile information, including full names, emails, genders, date of birth, and locales.
+* Retrieve profile pictures.
+* Login using the Social Network.
+
+#### Code Example:
+
+```` java
+// final Profile profile = new GooglePlus(this, "[clientIdentifier]", "[clientSecret]");
+// final Profile profile = new GitHub(this, "[clientIdentifier]", "[clientSecret]");
+// final Profile profile = new Slack(this, "[clientIdentifier]", "[clientSecret]");
+// ...
+final Profile profile = new Facebook(this, "[clientIdentifier]", "[clientSecret]");
+new Thread() {
+    @Override
+    public void run() {
+        String fullName = profile.getFullName();
+        String email = profile.getEmail();
+        // ...
+    }
+}.start();
+````
 
 ### Payment 
 
@@ -75,81 +153,6 @@ new Thread() {
     @Override
     public void run() {
         email.sendEmail("info@cloudrail.com", "CloudRail", Arrays.asList("foo@bar.com", "bar@foo.com"), "Welcome", "Hello from CloudRail", null, null, null);
-    }
-}.start();
-````
-
-### Social Media Profiles:
-
-* Facebook
-* Github
-* Google Plus
-* LinkedIn
-* Slack
-* Twitter
-* Windows Live
-* Yahoo
-
-#### Features
-
-* Get profile information, including full names, emails, genders, date of birth, and locales.
-* Retrieve profile pictures.
-* Login using the Social Network.
-
-#### Code Example:
-
-```` java
-// final Profile profile = new GooglePlus(this, "[clientIdentifier]", "[clientSecret]");
-// final Profile profile = new GitHub(this, "[clientIdentifier]", "[clientSecret]");
-// final Profile profile = new Slack(this, "[clientIdentifier]", "[clientSecret]");
-// ...
-final Profile profile = new Facebook(this, "[clientIdentifier]", "[clientSecret]");
-new Thread() {
-    @Override
-    public void run() {
-        String fullName = profile.getFullName();
-        String email = profile.getEmail();
-        // ...
-    }
-}.start();
-````
-
-### Cloud Storage:
-
-* Dropbox
-* Box
-* Google Drive
-* Microsoft OneDrive
-
-#### Features:
-
-* Download files from Cloud Storage.
-* Upload files to Cloud Storage.
-* Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
-* Retrieve user information.
-
-#### Code Example:
-
-```` java
-// CloudStorage cs = new Box(context, "[clientIdentifier]", "[clientSecret]");
-// CloudStorage cs = new OneDrive(context, "[clientIdentifier]", "[clientSecret]");
-// CloudStorage cs = new GoogleDrive(context, "[clientIdentifier]", "[clientSecret]");
-CloudStorage cs = new Dropbox(context, "[clientIdentifier]", "[clientSecret]");
-new Thread() {
-    @Override
-    public void run() {
-        cs.createFolder("/TestFolder"); // <---
-        InputStream stream = null;
-        try {
-            AssetManager assetManager = getAssets();
-            stream = assetManager.open("UserData.csv");
-            long size = assetManager.openFd("UserData.csv").getLength();
-            cs.upload("/TestFolder/Data.csv", stream, size, false); // <---
-        } catch (Exception e) {
-            // TODO: handle error
-        } finally {
-            // TODO: close stream
-        }
     }
 }.start();
 ````
