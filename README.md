@@ -157,7 +157,7 @@ new Thread() {
 }.start();
 ````
 
-More interfaces like payment and messaging are coming soon.
+More interfaces are coming soon.
 
 ## Advantages of Using CloudRail
 
