@@ -1,3 +1,6 @@
+<p align="center">
+  <img width="200px" src="http://cloudrail.github.io/img/cloudrail_logo_github.png"/>
+</p>
 # CloudRail - Integrate Multiple Services With Just One API
 
 <p align="center">
