@@ -1,7 +1,7 @@
 <p align="center">
   <img width="200px" src="http://cloudrail.github.io/img/cloudrail_logo_github.png"/>
 </p>
-# CloudRail SI for Android 
+# CloudRail SI for Android
 Integrate Multiple Services With Just One API
 
 <p align="center">
@@ -110,6 +110,7 @@ new Thread() {
 #### Code Example
 
 ```` java
+// final Payment payment = new Stripe(this, "[secretKey]");
 final Payment payment = new PayPal(this, true, "[clientIdentifier]", "[clientSecret]");
 new Thread() {
     @Override
@@ -133,6 +134,7 @@ new Thread() {
 #### Code Example
 
 ````java
+// final SMS sms = new Nexmo(this, "[clientIdentifier]", "[clientSecret]");
 final SMS sms = new Twilio(this, "[clientIdentifier]", "[clientSecret]");
 new Thread() {
 @Override
@@ -154,6 +156,7 @@ new Thread() {
 #### Code Example
 
 ````java
+// final Email email = new Mailjet(this, "[clientID]", "[clientSecret]");
 final Email email = new Sendgrid(this, "[username]", "[password]");
 new Thread() {
     @Override
@@ -163,7 +166,7 @@ new Thread() {
 }.start();
 ````
 ---
-### Points of Interest: 
+### Points of Interest:
 
 * Google Places
 * Foursquare
@@ -177,6 +180,8 @@ new Thread() {
 #### Code Example
 
 ```` java
+// final PointsOfInteres poi = new Foursquare(this, "[clientID]", "[clientSecret]");
+// final PointsOfInteres poi = new Yelp(this, "[consumerKey]", "[consumerSecret]", "[token]", "[tokenSecret]");
 final PointsOfInteres poi = new GooglePlaces(this, "[apiKey]");
 new Thread() {
     @Override
@@ -197,7 +202,7 @@ More interfaces are coming soon.
 
 * Switch services instantly: One line of code is needed to set up the service you are using. Changing which service is as simple as changing the name to the one you wish to use.
 
-* Simple Documentation: There is no searching around Stack Overflow for the answer. The CloudRail documentation at https://docs.cloudrail.com/ is regularly updated, clean, and simple to use. 
+* Simple Documentation: There is no searching around Stack Overflow for the answer. The CloudRail documentation at https://docs.cloudrail.com/ is regularly updated, clean, and simple to use.
 
 * No Maintenance Times: The CloudRail Libraries are updated when a provider changes their API.
 
