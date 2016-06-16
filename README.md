@@ -43,6 +43,7 @@ Point of Interest | Google Places, Foursquare, Yelp
 * Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
 * Retrieve user information.
 
+[Full Documentation](https://docs.cloudrail.com/docs/cloud-storage)
 #### Code Example:
 
 ```` java
@@ -86,6 +87,7 @@ new Thread() {
 * Retrieve profile pictures.
 * Login using the Social Network.
 
+[Full Documentation](https://docs.cloudrail.com/docs/profile)
 #### Code Example:
 
 ```` java
@@ -115,6 +117,7 @@ new Thread() {
 * Refund previously made charges
 * Manage subscriptions
 
+[Full Documentation](https://docs.cloudrail.com/docs/payment)
 #### Code Example
 
 ```` java
@@ -139,6 +142,8 @@ new Thread() {
 
 * Send Email
 
+[Full Documentation](https://docs.cloudrail.com/docs/email)
+
 #### Code Example
 
 ````java
@@ -160,6 +165,8 @@ new Thread() {
 #### Features
 
 * Send SMS
+
+[Full Documentation](https://docs.cloudrail.com/docs/sms)
 
 #### Code Example
 
@@ -185,6 +192,7 @@ new Thread() {
 * Get a list of POIs nearby
 * Filter by categories or search term
 
+[Full Documentation](https://docs.cloudrail.com/docs/points-of-interest)
 #### Code Example
 
 ```` java
