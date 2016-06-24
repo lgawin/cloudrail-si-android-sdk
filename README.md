@@ -23,7 +23,7 @@ With CloudRail, you can easily integrate external APIs into your application. Cl
 Interface | Included Services 
 --- | --- 
 Cloud Storage | Dropbox, Google Drive, OneDrive, Box
-Social Profiles | Facebook, GitHub, Google+, LinkedIn, Slack, Twitter, Windows Live, Yahoo
+Social Profiles | Facebook, GitHub, Google+, LinkedIn, Slack, Twitter, Windows Live, Yahoo, Instagram
 Payment | PayPal, Stripe
 Email | Maljet, Sendgrid
 SMS | Twilio, Nexmo
@@ -80,6 +80,7 @@ new Thread() {
 * Twitter
 * Windows Live
 * Yahoo
+* Instagram
 
 #### Features
 
@@ -94,6 +95,7 @@ new Thread() {
 // final Profile profile = new GooglePlus(this, "[clientIdentifier]", "[clientSecret]");
 // final Profile profile = new GitHub(this, "[clientIdentifier]", "[clientSecret]");
 // final Profile profile = new Slack(this, "[clientIdentifier]", "[clientSecret]");
+// final Profile profile = new Instagram(this, "[clientIdentifier]", "[clientSecret]");
 // ...
 final Profile profile = new Facebook(this, "[clientIdentifier]", "[clientSecret]");
 new Thread() {
@@ -226,7 +228,7 @@ More interfaces are coming soon.
 
 ## Maven
 build.gradle
-```
+````
 repositories {
     maven {
         url "http://maven.cloudrail.com"
@@ -234,9 +236,9 @@ repositories {
 }
 
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.2.0'
+    compile 'com.cloudrail:cloudrail-si-android:2.4.0'
 }
-```
+````
 
 ## Get Updates
 

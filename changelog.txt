@@ -1,3 +1,10 @@
+- 2.4.0 - Instagram added, Bug fixes
+
+* Instagram was added to the Profile interface
+* Minor bug fixes in PayPal and Stripe integration, mainly concerning a better error handling and a few performance improvements
+* The profile picture URL returned from Facebook now points to the picture with a higher resolution
+* The image URL returned by the GooglePlaces API now points to the correct picture
+
 - 2.3.0 - New interface
 
 Added the Points of Interest interface which is implemented by three services: Google Places, Foursquare and Yelp.
