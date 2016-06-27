@@ -256,4 +256,8 @@ CloudRail is also available for other platforms like iOS and Java. You can find 
 
 ## Questions?
 
-Get in touch at any time by emailing us: support@cloudrail.com
+Get in touch at any time by emailing us: support@cloudrail.com 
+
+or
+
+Tag a question with cloudrail on [StackOverflow](http://stackoverflow.com/questions/tagged/cloudrail)
