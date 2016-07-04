@@ -1,6 +1,7 @@
 - 2.4.2 - CloudMetaData extension
 
-We extended the CloudMetaData returned by our interface with the date when a file was modified the last time.
+* extended the CloudMetaData returned by our interface with the date when a file was modified the last time.
+* fixed an issue which would cancel authentication when the user goes to another app
 
 - 2.4.1 - Hotfix PayPal and Stripe
 
