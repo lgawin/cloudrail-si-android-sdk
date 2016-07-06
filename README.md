@@ -269,6 +269,13 @@ dependencies {
 }
 ````
 
+## Code Samples
+
+If you don't know how to start or just want to have a look at how to use our SDK in a real use case, we created a few sample application which you can try out:
+
+* Sample using the CloudStorage interface: [File Viewer](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/simple-cloud-file-manager)
+* Sample using the Points of Interest interface: [POI Finder](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/simple-points-of-interest-finder)
+
 ## Get Updates
 
 To keep updated with CloudRail, including any new providers that are added, just add your email address to https://cloudrail.com/updates/.
