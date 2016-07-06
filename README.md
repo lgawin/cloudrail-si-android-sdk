@@ -15,7 +15,7 @@ CloudRail is a free software library which abstracts multiple APIs from differen
   <img width="800px" src="http://cloudrail.github.io/img/available_interfaces_v2.png"/>
 </p>
 
-Full documentation can be found at https://docs.cloudrail.com/
+Full documentation can be found at our [wiki](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki).
 
 With CloudRail, you can easily integrate external APIs into your application. CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers. This means that, for example, upload() works in exactly the same way for Dropbox as it does for Google Drive, OneDrive, and other Cloud Storage Services, and getEmail() works similarly the same way across all social networks.
 
@@ -28,6 +28,7 @@ Payment | PayPal, Stripe
 Email | Maljet, Sendgrid
 SMS | Twilio, Nexmo
 Point of Interest | Google Places, Foursquare, Yelp
+Social | Facebook, Twitter
 ---
 ### Cloud Storage Interface:
 
@@ -43,7 +44,7 @@ Point of Interest | Google Places, Foursquare, Yelp
 * Get Meta Data of files, folders and perform all standard operations (copy, move, etc) with them.
 * Retrieve user information.
 
-[Full Documentation](https://docs.cloudrail.com/docs/cloud-storage)
+[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-cloudstorage)
 #### Code Example:
 
 ```` java
@@ -88,7 +89,7 @@ new Thread() {
 * Retrieve profile pictures.
 * Login using the Social Network.
 
-[Full Documentation](https://docs.cloudrail.com/docs/profile)
+[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-profile)
 #### Code Example:
 
 ```` java
@@ -119,7 +120,7 @@ new Thread() {
 * Refund previously made charges
 * Manage subscriptions
 
-[Full Documentation](https://docs.cloudrail.com/docs/payment)
+[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-payment)
 #### Code Example
 
 ```` java
@@ -144,7 +145,7 @@ new Thread() {
 
 * Send Email
 
-[Full Documentation](https://docs.cloudrail.com/docs/email)
+[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-email)
 
 #### Code Example
 
@@ -168,7 +169,7 @@ new Thread() {
 
 * Send SMS
 
-[Full Documentation](https://docs.cloudrail.com/docs/sms)
+[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-sms)
 
 #### Code Example
 
@@ -194,7 +195,7 @@ new Thread() {
 * Get a list of POIs nearby
 * Filter by categories or search term
 
-[Full Documentation](https://docs.cloudrail.com/docs/points-of-interest)
+[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-pointsofinterest)
 #### Code Example
 
 ```` java
@@ -210,6 +211,34 @@ new Thread() {
 }.start();
 ````
 ---
+
+### Social Media Interface:
+
+* Facebook
+* Twitter
+
+#### Features
+
+* Get a list of connections.
+* Make a post for the user.
+
+[Full Documentation - coming soon!]()
+#### Code Example:
+
+```` java
+// final Profile profile = new Twitter(this, "[clientID]", "[clientSecret]");
+final Profile profile = new Facebook(this, "[clientID]", "[clientSecret]");
+new Thread() {
+    @Override
+    public void run() {
+        profile.postUpdate("Hey there! I'm using CloudRail.");
+        List<String> connections = profile.getConnections();
+        // ...
+    }
+}.start();
+````
+---
+
 More interfaces are coming soon.
 
 ## Advantages of Using CloudRail
@@ -236,7 +265,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.4.2'
+    compile 'com.cloudrail:cloudrail-si-android:2.5.0'
 }
 ````
 
@@ -252,7 +281,7 @@ CloudRail also has enterprise licensing options. Please contact us for more info
 
 ## Other Platforms
 
-CloudRail is also available for other platforms like iOS and Java. You can find all libraries on https://cloudrail.github.io
+CloudRail is also available for other platforms like iOS, Java and NodeJS. You can find all libraries on https://cloudrail.github.io
 
 ## Questions?
 
