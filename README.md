@@ -223,7 +223,7 @@ new Thread() {
 * Get a list of connections.
 * Make a post for the user.
 
-[Full Documentation - coming soon!]()
+[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-social)
 #### Code Example:
 
 ```` java
@@ -266,7 +266,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.5.1'
+    compile 'com.cloudrail:cloudrail-si-android:2.5.2'
 }
 ````
 
