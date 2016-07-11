@@ -1,6 +1,6 @@
 # Login with Sample
 
-This sample shall illustrate how you can use our SDK in order to support a "Login with ..." functionality. For our sample we will use a NodeJS server with a mongo database as well as an Android frontend to communicate with the server. The idea is, that the Android application lets a user sign in with Facebook, Twitter, Google or LinkedIn, sends the acquired information to our server. The server retrieves the unique identifier for the user from the chosen service, creates a new user in the database if necessary and returns a user specific token back to the frontend. This token will then be used to further communicate with the server.
+This sample illustrates how you can use our library in order to support a "Login with ..." functionality. For our sample we will use a NodeJS server with a mongo database as well as an Android frontend to communicate with the server. The idea is, that the Android application lets a user sign in with Facebook, Twitter, Google or LinkedIn, sends the acquired information to our server. The server retrieves the unique identifier for the user from the chosen service, creates a new user in the database if necessary and returns a user specific token back to the frontend. This token will then be used to further communicate with the server.
 
 ## Prerequisites
 
