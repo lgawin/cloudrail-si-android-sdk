@@ -1,0 +1,17 @@
+{
+  "name": "login-with-sample",
+  "version": "1.0.0",
+  "description": "This sample shows how you could handle the backend part for your \"Login with...\" integration through a simple node server and a local mongo database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "patrick",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cloudrail-si": "^2.5.0",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.3"
+  }
+}
