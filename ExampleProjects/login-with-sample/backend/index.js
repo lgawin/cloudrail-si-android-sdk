@@ -1,17 +1,17 @@
-var mongoose = require('mongoose');
-var express = require('express');
-var crypto = require('crypto');
-var bodyParser = require('body-parser');
-var cloudrail = require('cloudrail-si');
-var app = express();
-var userSchema = new mongoose.Schema({
+const mongoose = require('mongoose');
+const express = require('express');
+const crypto = require('crypto');
+const bodyParser = require('body-parser');
+const cloudrail = require('cloudrail-si');
+const app = express();
+const userSchema = new mongoose.Schema({
     uid: String,
     status: String,
     token: String
 });
-var User = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 
-var MONGODB_ADDRESS = 'mongodb://localhost/login-with-sample';
+const MONGODB_ADDRESS = 'mongodb://localhost/login-with-sample';
 
 // Connect to DB
 mongoose.connection.on("error", function (err) {
@@ -41,20 +41,16 @@ app.post("/user/authenticate", (req, res) => {
 
     /* ----- Receive the user identifier ----- */
 
-    var profile = new cloudrail.services[req.body.name](null, "[TwitterClientID]", "[TwitterClientSecret]");
-    var state = req.body.state;
+    let profile = new cloudrail.services[req.body.name](null, "[TwitterClientID]", "[TwitterClientSecret]");
+    let state = req.body.state;
     profile.loadAsString(state);
-    var userID = profile.getIdentifier((err, identifier) => {
-        debugger;
-        if(err) throw err;
-
+    profile.getIdentifier((err, identifier) => {
         addUserToDB(identifier, res);
     });
 });
 
 function addUserToDB(identifier, res) {
     User.findOne({"uid": identifier}, (err, user) => {
-        debugger;
         if(!user) {
             user = new User({
                 "uid": identifier,
@@ -69,9 +65,6 @@ function addUserToDB(identifier, res) {
 
 function returnToken(user, res) {
     user.save((err) => {
-        debugger;
-        if(err) throw err;
-
         res.set("Token", user.token);
         res.end();
     });
@@ -81,7 +74,7 @@ function returnToken(user, res) {
  * Return the status of a user. Authorization is required for this request.
  */
 app.get("/user/status", (req, res) => {
-    var auth = req.get("Authorization").split(" ");
+    let auth = req.get("Authorization").split(" ");
 
     User.findOne({token: auth[1]}, (err, user) => {
         if(!user) {
@@ -96,7 +89,7 @@ app.get("/user/status", (req, res) => {
  * Sets the status of a user. Authorization is required for this request.
  */
 app.post("/user/status", (req, res) => {
-    var auth = req.get("Authorization").split(" ");
+    let auth = req.get("Authorization").split(" ");
 
     User.findOne({token: auth[1]}, (err, user) => {
         if(!user) {
@@ -110,7 +103,7 @@ app.post("/user/status", (req, res) => {
     });
 });
 
-var port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, function() {
     console.log("Listening on " + port);
 });
