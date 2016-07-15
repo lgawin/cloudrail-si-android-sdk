@@ -1,3 +1,8 @@
+- 2.5.3 - Hotfix
+
+* Fix profile picture URL for Facebook
+* Error handling improvement for GoogleDrive
+
 - 2.5.2 - Error handling improvements
 
 * All services should now throw a more meaningful exception
