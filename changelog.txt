@@ -1,3 +1,8 @@
+- 2.5.5 - Monitoring and Bugfix
+
+* Add the optional monitoring support to the library
+* Throw correct exception if no internet connection is available
+
 - 2.5.4 - Bugfixes
 
 * Add the FLAG_ACTIVITY_NEW_TASK before starting the WebView in order to handle the cases in which the user can not pass an Activity as a Context
