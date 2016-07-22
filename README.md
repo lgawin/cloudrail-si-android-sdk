@@ -273,7 +273,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.5.5'
+    compile 'com.cloudrail:cloudrail-si-android:2.6.0'
 }
 ````
 
