@@ -266,14 +266,8 @@ More interfaces are coming soon.
 ## Maven
 build.gradle
 ````
-repositories {
-    maven {
-        url "http://maven.cloudrail.com"
-    }
-}
-
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.6.0'
+    compile 'com.cloudrail:cloudrail-si-android:2.6.1'
 }
 ````
 
