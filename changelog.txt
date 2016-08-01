@@ -1,3 +1,8 @@
+- 2.6.2 - Minor improvements
+
+* Prevent app from crashing when activity is killed while the ProgressDialog is showing
+* Don't throw an error if the WebViewClient is unable to load a resource
+
 - 2.6.1 - Minor improvements
 
 * Add a ProgressDialog while the WebView that is showing the authentication page is loading. This was necessary since users having a slow network connection would only see a white screen for a few seconds.
