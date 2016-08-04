@@ -1,3 +1,7 @@
+- 2.6.4 - OneDrive fix
+
+* getChildren now returns the complete list of children
+
 - 2.6.3 - Dropbox logout fix
 
 * Fix Dropbox logout issue which occurred whenever logout is called before a successful login was performed
