@@ -1,3 +1,7 @@
+- 2.6.7 - Minor improvement
+
+* The text that is displayed while the WebView is loading the website where the user needs to authenticate was changed to a more telling, service specific text
+
 - 2.6.6 - Box fix
 
 * Correctly return the last modified date for Box
