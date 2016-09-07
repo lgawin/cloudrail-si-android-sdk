@@ -1,3 +1,8 @@
+- 2.6.8 - Size optimization
+
+* Reduce the size of the SDK from ~550kb to ~350kb 
+* Bug fix in Dropbox’s exists() method which was returning a result even if the call failed
+
 - 2.6.7 - Minor improvement
 
 * The text that is displayed while the WebView is loading the website where the user needs to authenticate was changed to a more telling, service specific text
