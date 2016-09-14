@@ -8,7 +8,7 @@ Integrate Multiple Services With Just One API
   <img width="300px" src="http://cloudrail.github.io/img/cloudrail_si_github.png"/>
 </p>
 
-CloudRail is a free software library which abstracts multiple APIs from different providers into a single and universal interface.
+CloudRail is an API integration solution which abstracts multiple APIs from different providers into a single and universal interface.
 
 **Current Interfaces:**
 <p align="center">
@@ -24,7 +24,9 @@ Learn more about CloudRail on https://cloudrail.com
 
 ---
 ---
-With CloudRail, you can easily integrate external APIs into your application. CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers. This means that, for example, upload() works in exactly the same way for Dropbox as it does for Google Drive, OneDrive, and other Cloud Storage Services, and getEmail() works similarly the same way across all social networks.
+With CloudRail, you can easily integrate external APIs into your application. 
+CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers. 
+This means that, for example, upload() works in exactly the same way for Dropbox as it does for Google Drive, OneDrive, and other Cloud Storage Services, and getEmail() works similarly the same way across all social networks.
 
 ## Current Interfaces
 Interface | Included Services 
@@ -56,6 +58,8 @@ Point of Interest | Google Places, Foursquare, Yelp
 #### Code Example:
 
 ```` java
+CloudRail.setAppKey("[CloudRail License Key]");
+
 // CloudStorage cs = new Box(context, "[clientIdentifier]", "[clientSecret]");
 // CloudStorage cs = new OneDrive(context, "[clientIdentifier]", "[clientSecret]");
 // CloudStorage cs = new GoogleDrive(context, "[clientIdentifier]", "[clientSecret]");
@@ -101,6 +105,9 @@ new Thread() {
 #### Code Example:
 
 ```` java
+CloudRail.setAppKey("[CloudRail License Key]");
+
+
 // final Profile profile = new GooglePlus(this, "[clientIdentifier]", "[clientSecret]");
 // final Profile profile = new GitHub(this, "[clientIdentifier]", "[clientSecret]");
 // final Profile profile = new Slack(this, "[clientIdentifier]", "[clientSecret]");
@@ -132,6 +139,9 @@ new Thread() {
 #### Code Example:
 
 ```` java
+CloudRail.setAppKey("[CloudRail License Key]");
+
+
 // final Social social = new Twitter(this, "[clientID]", "[clientSecret]");
 final Social social = new Facebook(this, "[clientID]", "[clientSecret]");
 new Thread() {
@@ -160,6 +170,9 @@ new Thread() {
 #### Code Example
 
 ```` java
+CloudRail.setAppKey("[CloudRail License Key]");
+
+
 // final Payment payment = new Stripe(this, "[secretKey]");
 final Payment payment = new PayPal(this, true, "[clientIdentifier]", "[clientSecret]");
 new Thread() {
@@ -186,6 +199,9 @@ new Thread() {
 #### Code Example
 
 ````java
+CloudRail.setAppKey("[CloudRail License Key]");
+
+
 // final Email email = new Mailjet(this, "[clientID]", "[clientSecret]");
 final Email email = new Sendgrid(this, "[username]", "[password]");
 new Thread() {
@@ -210,6 +226,9 @@ new Thread() {
 #### Code Example
 
 ````java
+CloudRail.setAppKey("[CloudRail License Key]");
+
+
 // final SMS sms = new Nexmo(this, "[clientIdentifier]", "[clientSecret]");
 final SMS sms = new Twilio(this, "[clientIdentifier]", "[clientSecret]");
 new Thread() {
@@ -235,6 +254,9 @@ new Thread() {
 #### Code Example
 
 ```` java
+CloudRail.setAppKey("[CloudRail License Key]");
+
+
 // final PointsOfInteres poi = new Foursquare(this, "[clientID]", "[clientSecret]");
 // final PointsOfInteres poi = new Yelp(this, "[consumerKey]", "[consumerSecret]", "[token]", "[tokenSecret]");
 final PointsOfInteres poi = new GooglePlaces(this, "[apiKey]");
@@ -280,9 +302,13 @@ If you don't know how to start or just want to have a look at how to use our SDK
 * Sample using the Points of Interest interface: [POI Finder](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/simple-points-of-interest-finder)
 * Sample for the "Login with..." flow: [Login With Sample](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/login-with-sample)
 
-## Get Updates
+## License Key
 
-To keep updated with CloudRail, including any new providers that are added, just add your email address to https://cloudrail.com/updates/.
+CloudRail provides a developer portal which offers usage insights for the SDKs and allows you to generate license keys.
+
+It's free to sign up and generate a key.
+
+Head over to https://developers.cloudrail.com
 
 ## Pricing
 
@@ -292,7 +318,7 @@ CloudRail also has enterprise licensing options. Please contact us for more info
 
 ## Other Platforms
 
-CloudRail is also available for other platforms like iOS, Java and NodeJS. You can find all libraries on https://cloudrail.github.io
+CloudRail is also available for other platforms like iOS, Java and NodeJS. You can find all libraries on https://cloudrail.com
 
 ## Questions?
 
