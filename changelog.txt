@@ -1,3 +1,8 @@
+- 2.7.1 - Reduce minSdkVersion and Bugfix
+
+* Reduce the required minSdkVersion from 15 to 10
+* If an exception is thrown while sending statistics, this exception is ignored and does not impact the application
+
 - 2.7.0 - New developer portal
 
 * Add license key support for new developer portal. Signup for a free license key at developers.cloudrail.com and benefit from app statistics and API change management
