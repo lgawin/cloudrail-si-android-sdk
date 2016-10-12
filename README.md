@@ -31,7 +31,7 @@ This means that, for example, upload() works in exactly the same way for Dropbox
 ## Current Interfaces
 Interface | Included Services 
 --- | --- 
-Cloud Storage | Dropbox, Google Drive, OneDrive, Box
+Cloud Storage | Dropbox, Google Drive, OneDrive, Box, Egnyte
 Social Profiles | Facebook, GitHub, Google+, LinkedIn, Slack, Twitter, Windows Live, Yahoo, Instagram
 Social Interaction | Facebook, Twitter
 Payment | PayPal, Stripe
@@ -45,6 +45,7 @@ Point of Interest | Google Places, Foursquare, Yelp
 * Box
 * Google Drive
 * Microsoft OneDrive
+* Egnyte
 
 #### Features:
 
@@ -63,6 +64,7 @@ CloudRail.setAppKey("[CloudRail License Key]");
 // CloudStorage cs = new Box(context, "[clientIdentifier]", "[clientSecret]");
 // CloudStorage cs = new OneDrive(context, "[clientIdentifier]", "[clientSecret]");
 // CloudStorage cs = new GoogleDrive(context, "[clientIdentifier]", "[clientSecret]");
+// CloudStorage cs = new Egnyte(context, "[domain]","[apiKey]", "[sharedSecret]");
 CloudStorage cs = new Dropbox(context, "[clientIdentifier]", "[clientSecret]");
 new Thread() {
     @Override
