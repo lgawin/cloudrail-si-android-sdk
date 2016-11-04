@@ -1,6 +1,9 @@
 # Advanced Authentication Sample
 
-This sample should give you a good starting point for implementing the advanced authentication method. The main difference to the standard authentication is the fact that we now open the website, where the users needs to login to their account, in the users standard browser. By doing this, the user can verify that the website that was opened actually belongs to the provider he selected. The WebView in the standard authentication does not show any details about which site was opened or if the certificate belongs to the provider. However, this does not make the standard authentication less secure than the advanced one, it is a matter of trust. Since the WebView is started from our SDK, the website that is opened can not be modified by a third party. So if you trust our SDK to not open any malicious website and your users trust your app not to do so, there is no need to switch to the advanced method.
+This sample should give you a good starting point for implementing the advanced authentication method. The main difference to the standard authentication is the fact that we now open the website where the users need to login to their account in the user's standard browser instead of a WebView. By doing this, users can verify that the website that was opened actually belongs to the provider they selected. The WebView in the standard authentication does not show any details about which site was opened or if the certificate belongs to the provider.
+
+The default method using a WebView is okay if your users trust you and you trust us not to maliciously open a fake website.
+If this cannot be asserted, we recommend advanced authentication which requires less trust.
 
 ## How to enable it
 
