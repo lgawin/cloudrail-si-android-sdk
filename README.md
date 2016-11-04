@@ -302,6 +302,8 @@ If you don't know how to start or just want to have a look at how to use our SDK
 * Sample using the CloudStorage interface: [File Viewer](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/simple-cloud-file-manager)
 * Sample using the Points of Interest interface: [POI Finder](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/simple-points-of-interest-finder)
 * Sample for the "Login with..." flow: [Login With Sample](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/login-with-sample)
+* Sample for using advanced authentication: [Advanced Authentication](https://github.com/CloudRail/cloudrail-si-android-sdk/tree/master/ExampleProjects/advanced_authentication)
+
 
 ## License Key
 
