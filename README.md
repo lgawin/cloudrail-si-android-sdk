@@ -291,7 +291,7 @@ More interfaces are coming soon.
 build.gradle
 ````
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.8.1‘
+    compile 'com.cloudrail:cloudrail-si-android:2.8.2‘
 }
 ````
 

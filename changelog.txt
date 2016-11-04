@@ -1,3 +1,7 @@
+- 2.8.2 -
+
+* Add an advanced authentication method which doesn’t use a WebView but the usual browser to perform the authentication. The reason being, if you use the local browser, the user can validate the authentication website and be sure that the site is owned by the respective service provider. If you want more information, check our sample in ExampleProjects/advanced_authentication
+
 - 2.8.1 -
 
 * Update the Facebook integration to the latest API version 2.8
