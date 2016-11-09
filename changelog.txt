@@ -1,3 +1,11 @@
+- 2.9.0 - 
+
+* Introduced new interface called Business Cloud Storage
+* Amazon S3 has been added as a new service implementing Business Cloud Storage
+* Microsoft Azure has been added as a new service implementing Business Cloud Storage
+* Backblaze has been added as a new service implementing Business Cloud Storage
+* Rackspace has been added as a new service implementing Business Cloud Storage
+
 - 2.8.2 -
 
 * Add an advanced authentication method which doesn’t use a WebView but the usual browser to perform the authentication. The reason being, if you use the local browser, the user can validate the authentication website and be sure that the site is owned by the respective service provider. If you want more information, check our sample in ExampleProjects/advanced_authentication

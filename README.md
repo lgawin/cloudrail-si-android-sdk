@@ -18,7 +18,7 @@ CloudRail is an API integration solution which abstracts multiple APIs from diff
 ---
 ---
 
-Full documentation can be found at our [wiki](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki).
+Full documentation can be found at our [wiki](https://documentation.cloudrail.com/android/android/Home).
 
 Learn more about CloudRail on https://cloudrail.com
 
@@ -32,6 +32,7 @@ This means that, for example, upload() works in exactly the same way for Dropbox
 Interface | Included Services 
 --- | --- 
 Cloud Storage | Dropbox, Google Drive, OneDrive, Box, Egnyte
+Business Cloud Storage | AmazonS3, Microsoft Azure, Rackspace, Backblaze
 Social Profiles | Facebook, GitHub, Google+, LinkedIn, Slack, Twitter, Windows Live, Yahoo, Instagram
 Social Interaction | Facebook, Twitter
 Payment | PayPal, Stripe
@@ -55,7 +56,7 @@ Point of Interest | Google Places, Foursquare, Yelp
 * Retrieve user and quota information.
 * Generate share links for files and folders.
 
-[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-cloudstorage)
+[Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-cloudstorage)
 #### Code Example:
 
 ```` java
@@ -84,6 +85,50 @@ new Thread() {
 }.start();
 ````
 ---
+
+### Business Cloud Storage Interface:
+
+* Amazon S3
+* Microsoft Azure
+* Rackspace
+* Backblaze
+
+#### Features:
+
+* Create, delete and list buckets
+* Upload files
+* Download files
+* List files in a bucket and delete files
+* Get file metadata (last modified, size, etc.)
+
+[Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-cloudstorage)
+#### Code Sample
+```` java
+CloudRail.setAppKey("[CloudRail License Key]");
+
+
+// BusinessCloudStorage cs = new MicrosoftAzure(context, "[accountName]", "[accessKey]");
+// BusinessCloudStorage cs = new Rackspace(context, "[username]", "[apiKey]", "[region]");
+// BusinessCloudStorage cs = new Backblaze(context, "[accountId]", "[appKey]");
+BusinessCloudStorage cs = new AmazonS3(context, "[accessKeyId]", "[secretAccessKey]", "[region]");
+
+new Thread() {
+    @Override
+    public void run() {
+        Bucket bucket cs.createBucket(„testbucket“);
+        
+	// Loads a file from the application's assets and uploads it
+	AssetManager assetManager = getAssets();
+	InputStream stream = assetManager.open("UserData.csv");
+	long size = assetManager.openFd("UserData.csv").getLength();
+	storage.uploadFile(bucket, "Data.csv", stream, size);
+	Log.i("info", "Upload successfully finished");
+    }
+}.start();
+````
+
+---
+
 ### Social Media Profiles Interface:
 
 * Facebook
@@ -102,7 +147,7 @@ new Thread() {
 * Retrieve profile pictures.
 * Login using the Social Network.
 
-[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-profile)
+[Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-profile)
 #### Code Example:
 
 ```` java
@@ -136,7 +181,7 @@ new Thread() {
 * Get a list of connections.
 * Make a post for the user.
 
-[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-social)
+[Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-social)
 #### Code Example:
 
 ```` java
@@ -167,7 +212,7 @@ new Thread() {
 * Refund previously made charges
 * Manage subscriptions
 
-[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-payment)
+[Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-payment)
 #### Code Example
 
 ```` java
@@ -195,7 +240,7 @@ new Thread() {
 
 * Send Email
 
-[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-email)
+[Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-email)
 
 #### Code Example
 
@@ -222,7 +267,7 @@ new Thread() {
 
 * Send SMS
 
-[Full Documentation](https://github.com/CloudRail/cloudrail-si-android-sdk/wiki/Usage#interfaces-sms)
+[Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-sms)
 
 #### Code Example
 
@@ -281,7 +326,7 @@ More interfaces are coming soon.
 
 * Switch services instantly: One line of code is needed to set up the service you are using. Changing which service is as simple as changing the name to the one you wish to use.
 
-* Simple Documentation: There is no searching around Stack Overflow for the answer. The CloudRail documentation at https://github.com/CloudRail/cloudrail-si-android-sdk/wiki is regularly updated, clean, and simple to use.
+* Simple Documentation: There is no searching around Stack Overflow for the answer. The CloudRail documentation at https://documentation.cloudrail.com/android/android/Home is regularly updated, clean, and simple to use.
 
 * No Maintenance Times: The CloudRail Libraries are updated when a provider changes their API.
 
@@ -291,7 +336,7 @@ More interfaces are coming soon.
 build.gradle
 ````
 dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.8.2‘
+    compile 'com.cloudrail:cloudrail-si-android:2.9.0‘
 }
 ````
 
