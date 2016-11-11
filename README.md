@@ -115,7 +115,7 @@ BusinessCloudStorage cs = new AmazonS3(context, "[accessKeyId]", "[secretAccessK
 new Thread() {
     @Override
     public void run() {
-        Bucket bucket cs.createBucket(„testbucket“);
+        Bucket bucket cs.createBucket("testbucket");
         
 	// Loads a file from the application's assets and uploads it
 	AssetManager assetManager = getAssets();
