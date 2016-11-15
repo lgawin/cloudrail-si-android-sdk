@@ -1,5 +1,6 @@
 package com.cloudrail.fileviewer;
 
+import android.Manifest;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -15,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.vistrav.ask.Ask;
+
 public class FileViewer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,6 +31,15 @@ public class FileViewer extends AppCompatActivity
         setContentView(R.layout.activity_file_viewer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /**
+         *  This is required for Android versions 6.0.0 and above. Android introduced a new permission
+         *  police which requires a developer to not only put the required permissions into the manifest
+         *  file but also prompt the user to grant the required permission during runtime. For this
+         *  purpose we use a library called Ask (https://github.com/00ec454/Ask) since it makes the
+         *  process easier than the using the standard Android API.
+         */
+        Ask.on(this).forPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE).go();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

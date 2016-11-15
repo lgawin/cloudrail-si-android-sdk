@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.cloudrail.si.CloudRail;
 import com.cloudrail.si.exceptions.ParseException;
 import com.cloudrail.si.services.Box;
 import com.cloudrail.si.interfaces.CloudStorage;
@@ -14,10 +15,14 @@ import com.cloudrail.si.services.OneDrive;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Created by patrick on 08.04.16.
+ * This class encapsulates the different services being used by the application. It also initializes
+ * them and persists the authentication data.
+ *
+ * @author patrick
  */
-public class Services {
-    private static Services ourInstance = new Services();
+class Services {
+    private final static String CLOUDRAIL_LICENSE_KEY = "<Your CloudRail License Key>";
+    private final static Services ourInstance = new Services();
 
     private final AtomicReference<CloudStorage> dropbox = new AtomicReference<>();
     private final AtomicReference<CloudStorage> box = new AtomicReference<>();
@@ -26,7 +31,7 @@ public class Services {
 
     private Activity context = null;
 
-    public static Services getInstance() {
+    static Services getInstance() {
         return ourInstance;
     }
 
@@ -50,8 +55,10 @@ public class Services {
     }
 
     // --------- Public Methods -----------
-    public void prepare(Activity context) {
+    void prepare(Activity context) {
         this.context = context;
+
+        CloudRail.setAppKey(CLOUDRAIL_LICENSE_KEY);
 
         this.initDropbox();
         this.initBox();
@@ -72,7 +79,7 @@ public class Services {
         } catch (ParseException e) {}
     }
 
-    public CloudStorage getService(int service) {
+    CloudStorage getService(int service) {
         AtomicReference<CloudStorage> ret = new AtomicReference<>();
 
         switch (service) {
@@ -95,7 +102,7 @@ public class Services {
         return ret.get();
     }
 
-    public void storePersistent() {
+    void storePersistent() {
         SharedPreferences sharedPreferences = context.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -103,6 +110,6 @@ public class Services {
         editor.putString("boxPersistent", box.get().saveAsString());
         editor.putString("googledrivePersistent", googledrive.get().saveAsString());
         editor.putString("onedrivePersistent", onedrive.get().saveAsString());
-        editor.commit();
+        editor.apply();
     }
 }

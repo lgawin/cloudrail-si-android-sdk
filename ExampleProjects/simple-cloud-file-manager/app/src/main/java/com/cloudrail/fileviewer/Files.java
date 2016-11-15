@@ -67,7 +67,7 @@ public class Files extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
             case FILE_SELECT: {
-                if(resultCode == getOwnActivity().RESULT_OK) {
+                if(resultCode == Activity.RESULT_OK) {
                     final Uri uri = data.getData();
                     final String name;
                     String[] projection = {MediaStore.MediaColumns.DISPLAY_NAME};
