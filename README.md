@@ -32,7 +32,7 @@ This means that, for example, upload() works in exactly the same way for Dropbox
 Interface | Included Services 
 --- | --- 
 Cloud Storage | Dropbox, Google Drive, OneDrive, Box, Egnyte, OneDrive Business
-Business Cloud Storage | AmazonS3, Microsoft Azure, Rackspace, Backblaze
+Business Cloud Storage | AmazonS3, Microsoft Azure, Rackspace, Backblaze, Google Cloud Platform
 Social Profiles | Facebook, GitHub, Google+, LinkedIn, Slack, Twitter, Windows Live, Yahoo, Instagram, Heroku
 Social Interaction | Facebook, Twitter
 Payment | PayPal, Stripe
@@ -93,6 +93,7 @@ new Thread() {
 * Microsoft Azure
 * Rackspace
 * Backblaze
+* Google Cloud Platform
 
 #### Features:
 
@@ -111,6 +112,7 @@ CloudRail.setAppKey("[CloudRail License Key]");
 // BusinessCloudStorage cs = new MicrosoftAzure(context, "[accountName]", "[accessKey]");
 // BusinessCloudStorage cs = new Rackspace(context, "[username]", "[apiKey]", "[region]");
 // BusinessCloudStorage cs = new Backblaze(context, "[accountId]", "[appKey]");
+// BusinessCloudStorage cs = new GoogleCloudPlatform(context, "[clientEmail]", "[privateKey]", "[projectId]");
 BusinessCloudStorage cs = new AmazonS3(context, "[accessKeyId]", "[secretAccessKey]", "[region]");
 
 new Thread() {
