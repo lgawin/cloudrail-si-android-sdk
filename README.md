@@ -337,12 +337,7 @@ More interfaces are coming soon.
 * Direct Data: Everything happens directly in the Library. No data ever passes a CloudRail server.
 
 ## Maven
-build.gradle
-````
-dependencies {
-    compile 'com.cloudrail:cloudrail-si-android:2.11.0‘
-}
-````
+http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22cloudrail-si-android%22
 
 ## Sample Applications
 
