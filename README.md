@@ -24,17 +24,17 @@ Learn more about CloudRail on https://cloudrail.com
 
 ---
 ---
-With CloudRail, you can easily integrate external APIs into your application. 
-CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers. 
+With CloudRail, you can easily integrate external APIs into your application.
+CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers.
 This means that, for example, upload() works in exactly the same way for Dropbox as it does for Google Drive, OneDrive, and other Cloud Storage Services, and getEmail() works similarly the same way across all social networks.
 
 ## Current Interfaces
-Interface | Included Services 
---- | --- 
+Interface | Included Services
+--- | ---
 Cloud Storage | Dropbox, Google Drive, OneDrive, Box, Egnyte, OneDrive Business
 Business Cloud Storage | AmazonS3, Microsoft Azure, Rackspace, Backblaze, Google Cloud Platform
 Social Profiles | Facebook, GitHub, Google+, LinkedIn, Slack, Twitter, Windows Live, Yahoo, Instagram, Heroku
-Social Interaction | Facebook, Twitter
+Social Interaction | Facebook, FacebookPage, Twitter
 Payment | PayPal, Stripe
 Email | Maljet, Sendgrid
 SMS | Twilio, Nexmo
@@ -119,7 +119,7 @@ new Thread() {
     @Override
     public void run() {
         Bucket bucket cs.createBucket("testbucket");
-        
+
 	// Loads a file from the application's assets and uploads it
 	AssetManager assetManager = getAssets();
 	InputStream stream = assetManager.open("UserData.csv");
@@ -178,12 +178,14 @@ new Thread() {
 ### Social Media Interaction Interface:
 
 * Facebook
+* FacebookPage
 * Twitter
 
 #### Features
 
 * Get a list of connections.
 * Make a post for the user.
+* Post images and videos.
 
 [Full Documentation](https://documentation.cloudrail.com/android/android/Usage#interfaces-social)
 #### Code Example:
@@ -193,6 +195,7 @@ CloudRail.setAppKey("[CloudRail License Key]");
 
 
 // final Social social = new Twitter(this, "[clientID]", "[clientSecret]");
+// final Social social = new Facebook(this, "[pageName]", "[clientID]", "[clientSecret]");
 final Social social = new Facebook(this, "[clientID]", "[clientSecret]");
 new Thread() {
     @Override
@@ -359,7 +362,7 @@ Head over to https://developers.cloudrail.com
 
 ## Pricing
 
-CloudRail is free to use as long as your app is free as well. Learn more about our pricing on https://cloudrail.com/cloudrail-pricing/ 
+CloudRail is free to use as long as your app is free as well. Learn more about our pricing on https://cloudrail.com/cloudrail-pricing/
 
 ## Other Platforms
 
@@ -367,7 +370,7 @@ CloudRail is also available for other platforms like iOS, Java and NodeJS. You c
 
 ## Questions?
 
-Get in touch at any time by emailing us: support@cloudrail.com 
+Get in touch at any time by emailing us: support@cloudrail.com
 
 or
 
