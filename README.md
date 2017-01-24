@@ -65,7 +65,7 @@ CloudRail.setAppKey("[CloudRail License Key]");
 
 // CloudStorage cs = new Box(context, "[clientIdentifier]", "[clientSecret]");
 // CloudStorage cs = new OneDrive(context, "[clientIdentifier]", "[clientSecret]");
-// CloudStorage cs = new GoogleDrive(context, "[clientIdentifier]", "[clientSecret]");
+// CloudStorage cs = new GoogleDrive(context, "[clientIdentifier]", "", "[redirectUri]", "[state]");
 CloudStorage cs = new Dropbox(context, "[clientIdentifier]", "[clientSecret]");
 new Thread() {
     @Override
