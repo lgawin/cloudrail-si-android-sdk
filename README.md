@@ -28,6 +28,17 @@ With CloudRail, you can easily integrate external APIs into your application.
 CloudRail is an abstracted interface that takes several services and then gives a developer-friendly API that uses common functions between all providers.
 This means that, for example, upload() works in exactly the same way for Dropbox as it does for Google Drive, OneDrive, and other Cloud Storage Services, and getEmail() works similarly the same way across all social networks.
 
+## Download
+
+Just add the dependency to your project `build.gradle` file:
+
+```groovy
+dependencies {  
+  compile 'com.cloudrail:cloudrail-si-android:2.14.2'
+}
+```
+via [Maven Central](http://search.maven.org/#search|ga|1|a:"cloudrail-si-android")
+
 ## Current Interfaces
 Interface | Included Services
 --- | ---
@@ -362,7 +373,7 @@ Head over to https://developers.cloudrail.com
 
 ## Pricing
 
-CloudRail is free to use as long as your app is free as well. Learn more about our pricing on https://cloudrail.com/cloudrail-pricing/
+Learn more about our pricing on https://cloudrail.com/cloudrail-pricing/
 
 ## Other Platforms
 
