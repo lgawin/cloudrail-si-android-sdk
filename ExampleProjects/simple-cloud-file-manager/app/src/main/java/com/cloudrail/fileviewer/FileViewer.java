@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -16,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.cloudrail.si.CloudRail;
 import com.vistrav.ask.Ask;
 
 public class FileViewer extends AppCompatActivity
@@ -138,5 +140,13 @@ public class FileViewer extends AppCompatActivity
         Fragment content = Files.newInstance(service);
         fragmentTransaction.replace(R.id.content, content, "files");
         fragmentTransaction.commit();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        if(intent.getCategories().contains("android.intent.category.BROWSABLE")) {
+            CloudRail.setAuthenticationResponse(intent);
+        }
+        super.onNewIntent(intent);
     }
 }

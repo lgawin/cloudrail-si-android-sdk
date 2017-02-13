@@ -47,7 +47,8 @@ class Services {
     }
 
     private void initGoogleDrive() {
-        googledrive.set(new GoogleDrive(context, "638240013795-k6cavk4npp6gtqkpb56icpm0hm4uo6aq.apps.googleusercontent.com", "hhJG6zCn4F7ObJUzllL3BXoL"));
+        googledrive.set(new GoogleDrive(context, "638240013795-966s147hdhg5o4j2mugs67k64pbitrdt.apps.googleusercontent.com", "", "com.cloudrail.fileviewer:/oauth2redirect", ""));
+        ((GoogleDrive) googledrive.get()).useAdvancedAuthentication();
     }
 
     private void initOneDrive() {
