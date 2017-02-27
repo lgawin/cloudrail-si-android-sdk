@@ -1,3 +1,7 @@
+- 2.15.0 -
+
+* Advanced request functionality for all of the services
+
 - 2.14.2 -
 
 * Hotfix: Using the advanced authentication on multiple services caused an issue
