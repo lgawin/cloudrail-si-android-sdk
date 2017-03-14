@@ -1,3 +1,7 @@
+- 2.16.1 -
+
+* Fix an issue with Facebook: Logout method now correctly performs the logout
+
 - 2.16.0 -
 
 * Enable developers to specify the scopes they want to acquire for the different services using OAuth
