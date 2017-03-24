@@ -1,3 +1,7 @@
+- 2.16.2 -
+
+* Enable downloading Google Documents as PDFs through the download method of Google Drive
+
 - 2.16.1 -
 
 * Fix an issue with Facebook: Logout method now correctly performs the logout
