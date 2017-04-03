@@ -1,3 +1,7 @@
+- 2.16.4 -
+
+* Repair OneDrive after a sudden change in the OneDrive API that happened without any prior notice
+
 - 2.16.3 -
 
 * Hotfix for GoogleDrive download method
