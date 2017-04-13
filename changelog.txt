@@ -1,3 +1,7 @@
+- 2.16.5 -
+
+* Hotfix for getChildrenPage method of Dropbox, OneDrive, OneDriveBusiness and GoogleDrive
+
 - 2.16.4 -
 
 * Repair OneDrive after a sudden change in the OneDrive API that happened without any prior notice
