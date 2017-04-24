@@ -1,3 +1,8 @@
+- 2.16.6 -
+
+* Fix an issue with GoogleDrive where the getChildren method does not return all metadata correctly
+* Add the Microsoft service which uses the new Microsoft Graph API to access OneDrive
+
 - 2.16.5 -
 
 * Hotfix for getChildrenPage method of Dropbox, OneDrive, OneDriveBusiness and GoogleDrive
